@@ -19,21 +19,26 @@ oben genannten Position und angebunden an die LeadTable-Kachel von b&p.
 Diese Punkte sind mit sinnvollen Platzhaltern belegt und sollten mit den echten
 Daten von b&p abgeglichen werden:
 
-1. **CI-Farben & Schrift** – die Seite konnte aus der Build-Umgebung **nicht**
-   auf `bp-metall.de` zugreifen (Netzwerk gesperrt), daher aktuell ein
-   technisches Industrie-CI: Stahl-Blau (`--brand:#1f6fa5`) mit Graphit-Dunkel
-   und einem Metallic-Akzent, Schrift „Barlow / Barlow Semi Condensed“.
-   Zum Anpassen an das echte b&p-Branding nur die `:root`-Variablen ganz oben
-   im `<style>`-Block in `index.html` austauschen (Farben + `--f-display`/`--f-body`).
-2. **Logo** – Text-Fallback „b&p“. Sobald ein Logo in `bilder/` liegt
-   (`bp-logo.png`/`.svg` bzw. `bp-logo-weiss.png`/`.svg`), wird es
-   automatisch verwendet.
+1. **CI-Farben** – ✅ **direkt aus dem gelieferten Logo abgeleitet**:
+   b&p-Blau (`--brand:#0066b1`), Anthrazit (`--brand-900:#20242b`, wie das
+   Logo-Negativ) und ein heller Blau-Akzent (`--accent:#1498d6`). Alles liegt
+   in den `:root`-Variablen ganz oben im `<style>`-Block – bei Bedarf dort
+   feinjustieren. Schrift ist „Barlow / Barlow Semi Condensed“ (technisch,
+   passend zur Logo-Anmutung) – falls b&p eine feste Hausschrift hat, dort
+   `--f-display`/`--f-body` tauschen.
+2. **Logo** – ✅ **eingebunden**. Aus den gelieferten PDFs wurden web-taugliche
+   Dateien erzeugt: `bilder/bp-logo.png` (farbig, transparent – Kopfzeile) und
+   `bilder/bp-logo-weiss.png` (weiß, transparent – Hero & Footer). Die
+   Original-PDFs bleiben als Quelle im Ordner; die „25 Jahre“-Jubiläumsversion
+   (`Logo 25.pdf`) liegt ebenfalls bei, ist aber nicht aktiv eingebunden.
 3. **Benefits** – die 6 Benefit-Kacheln sind ein fachlich passender Vorschlag
    für einen Zerspanungs-/Werkzeugbau-Betrieb (siehe Kommentar im Abschnitt
    `BENEFITS`). Bitte mit den tatsächlichen Benefits von b&p ersetzen.
-4. **Vorfilter-Fragen** – der Funnel nutzt einen Vorschlag (Qualifikation +
-   Schwerpunkt in der Zerspanung, siehe unten). Bitte prüfen/anpassen; ggf.
-   z. B. Schichtbereitschaft oder CNC-Steuerung ergänzen.
+4. **Vorfilter-Fragen** – Vorschlag, der die von b&p genannten Details bereits
+   abbildet: Qualifikation (mit Aussteuerung) + Schwerpunkt/Steuerung
+   (Drehen = Siemens mit angetriebenen Werkzeugen / Fräsen = Heidenhain über
+   ONE CNC). ONE CNC ist bewusst **kein** Ausschlusskriterium (wird angelernt).
+   Bitte final prüfen; ggf. z. B. Schichtbereitschaft ergänzen.
 5. **Kontaktdaten & Rechts-Links** – Telefon `02721 603140` und
    `info@bp-metall.de` sind aus dem öffentlichen Firmeneintrag übernommen.
    Impressum/Datenschutz zeigen auf `https://www.bp-metall.de/impressum/`
@@ -47,10 +52,11 @@ Erwartete Dateinamen:
 
 - `bilder/hero.jpg` – Hero-Bild (allgemein; alternativ `zerspanungsmechaniker.jpg`)
 
-Logo (optional, ersetzt den Text-Schriftzug automatisch):
+Logo (bereits eingebunden, ersetzt den Text-Schriftzug automatisch):
 
-- `bilder/bp-logo.svg` / `.png` – farbiges Logo (Kopfzeile)
-- `bilder/bp-logo-weiss.svg` / `.png` – weißes Logo (Hero & Footer, dunkler Hintergrund)
+- `bilder/bp-logo.png` – farbiges Logo (Kopfzeile) ✅
+- `bilder/bp-logo-weiss.png` – weißes Logo (Hero & Footer, dunkler Hintergrund) ✅
+- Quelle: `bilder/BP_4_farbig_CMYK.pdf`, `BP_2_farbig_Weiss auf Schwarz.pdf`, `Logo 25.pdf`
 
 Hero-Fotos: Querformat, mind. ~1600 px breit. Motiv rechts platzieren –
 links liegt die Textfläche.
@@ -63,8 +69,9 @@ auf **Bewerberqualität statt reiner Masse**:
 1. **Qualifikation** – Ausbildung Zerspanungsmechaniker / vergleichbarer
    Metallberuf / Berufserfahrung. Wer „weder Ausbildung noch Erfahrung in der
    Metallbearbeitung“ wählt, wird ausgesteuert (kein Lead an LeadTable).
-2. **Schwerpunkt** – CNC-Fräsen / -Drehen / beides / Einsteiger (nur zur
-   Einordnung, keine Aussteuerung).
+2. **Schwerpunkt / Steuerung** – CNC-Drehen (Siemens, angetriebene Werkzeuge) /
+   CNC-Fräsen (Heidenhain) / beides / Quereinsteiger (nur zur Einordnung, keine
+   Aussteuerung – ONE CNC wird angelernt).
 3. **Kontaktdaten** + optionaler Lebenslauf-Upload.
 
 Screen-out und Erfolg gelten nur für den aktuellen Besuch – ein Seiten-Neuladen
