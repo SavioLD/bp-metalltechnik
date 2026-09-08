@@ -1,10 +1,13 @@
 # b&p Metalltechnik – Karriereseite
 
 Recruiting-Landingpage / Ad-Funnel für die **b&p Metalltechnik GmbH** (Lennestadt).
-Offene Stelle: **Zerspanungsmechaniker (m/w/d)**.
+Offene Stellen (m/w/d):
+1. **Zerspanungsmechaniker – CNC-Fräsen** (3- & 5-Achs, Heidenhain)
+2. **Zerspanungsmechaniker – Drehtechnik** (Drehen & Fräsen, Sägen/Schleifen, Siemens)
+3. **Elektroniker – SPS-Steuerung**
 
-Aufbau 1:1 an der ALWA-Karriereseite orientiert – in eigenem b&p-CI, mit der
-oben genannten Position und angebunden an die LeadTable-Kachel von b&p.
+Aufbau 1:1 an der ALWA-Karriereseite orientiert – in eigenem b&p-CI, mit den
+oben genannten Positionen und angebunden an die LeadTable-Kachel von b&p.
 
 ## Inhalt
 
@@ -34,15 +37,17 @@ Daten von b&p abgeglichen werden:
 3. **Benefits** – die 6 Benefit-Kacheln sind ein fachlich passender Vorschlag
    für einen Zerspanungs-/Werkzeugbau-Betrieb (siehe Kommentar im Abschnitt
    `BENEFITS`). Bitte mit den tatsächlichen Benefits von b&p ersetzen.
-4. **Vorfilter-Fragen** – Vorschlag, der die von b&p genannten Details bereits
-   abbildet: Qualifikation (mit Aussteuerung) + Schwerpunkt/Steuerung
-   (Drehen = Siemens mit angetriebenen Werkzeugen / Fräsen = Heidenhain über
-   ONE CNC). ONE CNC ist bewusst **kein** Ausschlusskriterium (wird angelernt).
-   Bitte final prüfen; ggf. z. B. Schichtbereitschaft ergänzen.
-5. **Kontaktdaten & Rechts-Links** – Telefon `02721 603140` und
-   `info@bp-metall.de` sind aus dem öffentlichen Firmeneintrag übernommen.
-   Impressum/Datenschutz zeigen auf `https://www.bp-metall.de/impressum/`
-   bzw. `/datenschutz/`. Bitte die korrekten Adressen/URLs verifizieren.
+4. **Vorfilter-Fragen** – ✅ eingebaut (siehe Abschnitt „Screening"): Position,
+   Ausbildung, Deutsch (B2), Entfernung (Umkreis), Führerschein, CAD/CAM.
+   **Bitte 1× bestätigen, welche davon hart aussteuern sollen.** Aktuell hart
+   (kein Lead): keine abgeschlossene Ausbildung, Deutsch unter B2.
+   Nur erfasst (kein Auto-Ausschluss): Entfernung, Führerschein, CAD/CAM –
+   damit gute Leute nicht versehentlich rausfliegen (die 20-km-Filterung
+   übernimmt zusätzlich das Meta-Targeting). Zum Verschärfen einfach den
+   jeweiligen Antwort-Wert in `SCREEN_OUT` (in `index.html`) ergänzen.
+5. **Kontaktdaten & Rechts-Links** – ✅ vom Kunden bestätigt: Telefon
+   `02721 603140`, `info@bp-metall.de`, Impressum/Datenschutz auf
+   `https://www.bp-metall.de/impressum/` bzw. `/datenschutz/`.
 
 ## Bilder (Hero-Fotos & Logo)
 
@@ -50,7 +55,7 @@ Die Fotos gehören in den Ordner **`bilder/`**. Der Hero lädt automatisch das
 passende Bild – fehlt es, bleibt ein Farbverlauf stehen (kein kaputtes Bild).
 Erwartete Dateinamen:
 
-- `bilder/hero.jpg` – Hero-Bild (allgemein; alternativ `zerspanungsmechaniker.jpg`)
+- `bilder/hero.jpg` – Hero-Bild (allgemein)
 
 Logo (bereits eingebunden, ersetzt den Text-Schriftzug automatisch):
 
@@ -63,16 +68,23 @@ links liegt die Textfläche.
 
 ## Screening / Vorfilterung
 
-Das Bewerbungsformular ist ein 3-Schritt-Funnel zur Vorfilterung – ausgelegt
-auf **Bewerberqualität statt reiner Masse**:
+Das Bewerbungsformular ist ein 7-Schritt-Funnel zur Vorfilterung – ausgelegt
+auf **Bewerberqualität statt reiner Masse** (jede Auswahlfrage springt per
+Ein-Klick weiter, dauert real ~1 Minute):
 
-1. **Qualifikation** – Ausbildung Zerspanungsmechaniker / vergleichbarer
-   Metallberuf / Berufserfahrung. Wer „weder Ausbildung noch Erfahrung in der
-   Metallbearbeitung“ wählt, wird ausgesteuert (kein Lead an LeadTable).
-2. **Schwerpunkt / Steuerung** – CNC-Drehen (Siemens, angetriebene Werkzeuge) /
-   CNC-Fräsen (Heidenhain) / beides / Quereinsteiger (nur zur Einordnung, keine
-   Aussteuerung – ONE CNC wird angelernt).
-3. **Kontaktdaten** + optionaler Lebenslauf-Upload.
+1. **Position** – CNC-Fräsen / Drehtechnik / Elektroniker SPS.
+2. **Ausbildung** – passend / anderer Bereich / keine. **Keine Ausbildung →
+   Aussteuerung** (kein Lead an LeadTable).
+3. **Deutsch** – fließend / B2 / unter B2. **Unter B2 → Aussteuerung.**
+4. **Entfernung (Umkreis)** – bis 20 km / 20–40 km / >40 km umzugsbereit / >40 km
+   (nur erfasst, keine Aussteuerung).
+5. **Führerschein** – Ja / Nein (nur erfasst).
+6. **CAD/CAM** – sicher / Grundkenntnisse / noch keine (nur erfasst; ONE CNC
+   wird angelernt).
+7. **Kontaktdaten** + optionaler Lebenslauf-Upload.
+
+Die Steuerung der Aussteuerung liegt in `index.html` in der Liste `SCREEN_OUT`
+(einfach den exakten Antwort-Wert ergänzen, um ein Kriterium hart zu machen).
 
 Screen-out und Erfolg gelten nur für den aktuellen Besuch – ein Seiten-Neuladen
 startet frisch (kein dauerhaftes Sperren per localStorage).
@@ -88,7 +100,8 @@ startet frisch (kein dauerhaftes Sperren per localStorage).
 
 Jede abgeschlossene Bewerbung wird per Webhook an LeadTable gesendet
 (Felder u. a. `vorname`, `nachname`, `name`, `email`, `telefon`, `stelle`,
-`qualifikation`, `schwerpunkt`, `lebenslauf`, `quelle`, `seite`).
+`ausbildung`, `deutsch`, `entfernung`, `fuehrerschein`, `cadcam`,
+`lebenslauf`, `quelle`, `seite`).
 Der Webhook ist in `index.html` in der Variable `WEBHOOK_URL` hinterlegt:
 
 ```
