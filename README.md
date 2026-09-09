@@ -37,14 +37,12 @@ Daten von b&p abgeglichen werden:
 3. **Benefits** – die 6 Benefit-Kacheln sind ein fachlich passender Vorschlag
    für einen Zerspanungs-/Werkzeugbau-Betrieb (siehe Kommentar im Abschnitt
    `BENEFITS`). Bitte mit den tatsächlichen Benefits von b&p ersetzen.
-4. **Vorfilter-Fragen** – ✅ eingebaut (siehe Abschnitt „Screening"): Position,
-   Ausbildung, Deutsch (B2), Entfernung (Umkreis), Führerschein, CAD/CAM.
-   **Bitte 1× bestätigen, welche davon hart aussteuern sollen.** Aktuell hart
-   (kein Lead): keine abgeschlossene Ausbildung, Deutsch unter B2.
-   Nur erfasst (kein Auto-Ausschluss): Entfernung, Führerschein, CAD/CAM –
-   damit gute Leute nicht versehentlich rausfliegen (die 20-km-Filterung
-   übernimmt zusätzlich das Meta-Targeting). Zum Verschärfen einfach den
-   jeweiligen Antwort-Wert in `SCREEN_OUT` (in `index.html`) ergänzen.
+4. **Vorfilter-Fragen** – ✅ eingebaut: **4 Qualifizierungsfragen** (Ausbildung,
+   Erfahrung/Steuerung inkl. CAD/CAM, Deutsch, Entfernung) mit **Punktebewertung**.
+   Wer insgesamt zu schwach ist („alles maximal schlecht") oder *Deutsch unter B2*
+   wählt, bekommt eine **freundliche Absage** (kein Lead). Details + Feinjustierung
+   (HARD_OUT / SCORES / MIN_SCORE) siehe Abschnitt „Screening". Führerschein und
+   CAD/CAM als Einzelfragen wurden entfernt (CAD/CAM steckt in „Erfahrung").
 5. **Kontaktdaten & Rechts-Links** – ✅ vom Kunden bestätigt: Telefon
    `02721 603140`, `info@bp-metall.de`, Impressum/Datenschutz auf
    `https://www.bp-metall.de/impressum/` bzw. `/datenschutz/`.
@@ -68,26 +66,30 @@ links liegt die Textfläche.
 
 ## Screening / Vorfilterung
 
-Das Bewerbungsformular ist ein 7-Schritt-Funnel zur Vorfilterung – ausgelegt
-auf **Bewerberqualität statt reiner Masse** (jede Auswahlfrage springt per
-Ein-Klick weiter, dauert real ~1 Minute):
+Das Bewerbungsformular ist ein 6-Schritt-Funnel: **Position + 4 Qualifizierungs-
+fragen + Kontaktdaten** – ausgelegt auf **Bewerberqualität statt reiner Masse**
+(jede Auswahlfrage springt per Ein-Klick weiter, dauert real ~1 Minute):
 
-1. **Position** – CNC-Fräsen / Drehtechnik / Elektroniker SPS.
-2. **Ausbildung** – passend / anderer Bereich / keine. **Keine Ausbildung →
-   Aussteuerung** (kein Lead an LeadTable).
-3. **Deutsch** – fließend / B2 / unter B2. **Unter B2 → Aussteuerung.**
-4. **Entfernung (Umkreis)** – bis 20 km / 20–40 km / >40 km umzugsbereit / >40 km
-   (nur erfasst, keine Aussteuerung).
-5. **Führerschein** – Ja / Nein (nur erfasst).
-6. **CAD/CAM** – sicher / Grundkenntnisse / noch keine (nur erfasst; ONE CNC
-   wird angelernt).
-7. **Kontaktdaten** + optionaler Lebenslauf-Upload.
+1. **Position** – CNC-Fräsen / Drehtechnik / Elektroniker SPS (nicht bewertet).
+2. **Ausbildung** – passend (3) / anderer Bereich (1) / keine (0).
+3. **Erfahrung/Steuerung** – mehrjährig inkl. CAD/CAM (3) / Grundkenntnisse (2) /
+   erste Berührung (1) / keine (0).
+4. **Deutsch** – fließend (3) / B2 (2) / **unter B2 (0 + hartes K.o.)**.
+5. **Entfernung/Umkreis** – bis 20 km (2) / 20–40 km (2) / >40 km umzugsbereit (1) /
+   >40 km (0).
+6. **Kontaktdaten** + optionaler Lebenslauf-Upload.
 
-Die Steuerung der Aussteuerung liegt in `index.html` in der Liste `SCREEN_OUT`
-(einfach den exakten Antwort-Wert ergänzen, um ein Kriterium hart zu machen).
+**Bewertung / Aussteuerung** (in `index.html`, oben im `<script>`):
+- **HARD_OUT** – Antworten, die immer sofort absagen. Aktuell nur *Deutsch unter B2*.
+  (Wenn z. B. auch *keine Ausbildung* immer absagen soll, den Wert dort ergänzen.)
+- **SCORES** – Punktwerte je Antwort (siehe oben in Klammern), Summe max. **11**.
+- **MIN_SCORE = 4** – Wer darunter liegt (also überall die schwächsten Antworten,
+  „alles maximal schlecht"), bekommt eine **freundliche Absage** und wird **nicht**
+  als Lead gesendet. Schwelle bei Bedarf einfach höher/niedriger stellen.
 
-Screen-out und Erfolg gelten nur für den aktuellen Besuch – ein Seiten-Neuladen
-startet frisch (kein dauerhaftes Sperren per localStorage).
+Der berechnete Punktwert wird als Feld `score` mit an LeadTable gesendet.
+Freundliche Absage und Erfolg gelten nur für den aktuellen Besuch – ein
+Seiten-Neuladen startet frisch (kein dauerhaftes Sperren per localStorage).
 
 ## Live schalten (GitHub Pages)
 
@@ -100,7 +102,7 @@ startet frisch (kein dauerhaftes Sperren per localStorage).
 
 Jede abgeschlossene Bewerbung wird per Webhook an LeadTable gesendet
 (Felder u. a. `vorname`, `nachname`, `name`, `email`, `telefon`, `stelle`,
-`ausbildung`, `deutsch`, `entfernung`, `fuehrerschein`, `cadcam`,
+`ausbildung`, `erfahrung`, `deutsch`, `entfernung`, `score`,
 `lebenslauf`, `quelle`, `seite`).
 Der Webhook ist in `index.html` in der Variable `WEBHOOK_URL` hinterlegt:
 

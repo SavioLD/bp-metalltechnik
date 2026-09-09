@@ -549,7 +549,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cfe0ee}
     <div class="form-card">
       <div class="form-card__head">
         <div class="progress"><div class="progress__bar" id="progressBar"></div></div>
-        <div class="progress__label"><span id="stepLabel">Schritt 1 von 7</span><span>~1 Min.</span></div>
+        <div class="progress__label"><span id="stepLabel">Schritt 1 von 6</span><span>~1 Min.</span></div>
       </div>
 
       <form class="form-card__body" id="applyForm" novalidate>
@@ -577,8 +577,20 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cfe0ee}
           </div>
         </div>
 
-        <!-- STEP 3 – Deutsch (Vorfilter / Screen-out) -->
+        <!-- STEP 3 – Erfahrung / Steuerung (Qualifizierung) -->
         <div class="fstep" data-step="3">
+          <h3>Wie viel Erfahrung bringst du für die Stelle mit?</h3>
+          <p class="hint">Bei b&amp;p arbeiten Menschen, die ihr Handwerk verstehen. Sei einfach ehrlich.</p>
+          <div class="choice-grid" data-field="erfahrung">
+            <label class="choice"><input type="radio" name="erfahrung" value="Mehrjährige Erfahrung – sicher an Maschine/Steuerung (inkl. CAD/CAM)" /><span class="key">A</span><span>Mehrjährige Erfahrung <small>sicher an Maschine/Steuerung, inkl. CAD/CAM</small></span></label>
+            <label class="choice"><input type="radio" name="erfahrung" value="Solide Grundkenntnisse an CNC/SPS" /><span class="key">B</span><span>Solide Grundkenntnisse <small>an CNC/SPS</small></span></label>
+            <label class="choice"><input type="radio" name="erfahrung" value="Erste Berührung – vieles lerne ich noch" /><span class="key">C</span><span>Erste Berührung <small>vieles lerne ich noch</small></span></label>
+            <label class="choice"><input type="radio" name="erfahrung" value="Keine Erfahrung" /><span class="key">D</span><span>Keine Erfahrung</span></label>
+          </div>
+        </div>
+
+        <!-- STEP 4 – Deutsch (Qualifizierung, hartes K.o. bei unter B2) -->
+        <div class="fstep" data-step="4">
           <h3>Wie gut sind deine Deutschkenntnisse?</h3>
           <p class="hint">Für die Arbeit an unseren Maschinen und im Team brauchst du sicheres Deutsch.</p>
           <div class="choice-grid" data-field="deutsch">
@@ -588,8 +600,8 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cfe0ee}
           </div>
         </div>
 
-        <!-- STEP 4 – Entfernung -->
-        <div class="fstep" data-step="4">
+        <!-- STEP 5 – Entfernung (Qualifizierung) -->
+        <div class="fstep" data-step="5">
           <h3>Wie weit wohnst du von Lennestadt entfernt?</h3>
           <p class="hint">Damit wir wissen, wie dein Arbeitsweg aussieht.</p>
           <div class="choice-grid" data-field="entfernung">
@@ -600,29 +612,8 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cfe0ee}
           </div>
         </div>
 
-        <!-- STEP 5 – Führerschein -->
-        <div class="fstep" data-step="5">
-          <h3>Hast du einen Führerschein (Klasse&nbsp;B)?</h3>
-          <p class="hint">Kurze Frage – für den Weg zum Betrieb.</p>
-          <div class="choice-grid" data-field="fuehrerschein">
-            <label class="choice"><input type="radio" name="fuehrerschein" value="Ja, Führerschein Klasse B" /><span class="key">A</span><span>Ja</span></label>
-            <label class="choice"><input type="radio" name="fuehrerschein" value="Nein, kein Führerschein" /><span class="key">B</span><span>Nein</span></label>
-          </div>
-        </div>
-
-        <!-- STEP 6 – CAD/CAM -->
+        <!-- STEP 6 – Kontaktdaten -->
         <div class="fstep" data-step="6">
-          <h3>Hast du Erfahrung in der CAD/CAM-Programmierung?</h3>
-          <p class="hint">Kein Muss – unser System ONE&nbsp;CNC lernst du bei uns.</p>
-          <div class="choice-grid" data-field="cadcam">
-            <label class="choice"><input type="radio" name="cadcam" value="Ja, sicher in CAD/CAM" /><span class="key">A</span><span>Ja, sicher</span></label>
-            <label class="choice"><input type="radio" name="cadcam" value="Grundkenntnisse in CAD/CAM" /><span class="key">B</span><span>Grundkenntnisse</span></label>
-            <label class="choice"><input type="radio" name="cadcam" value="Noch keine – lerne ich gern" /><span class="key">C</span><span>Noch keine <small>lerne ich gern</small></span></label>
-          </div>
-        </div>
-
-        <!-- STEP 7 – Kontaktdaten -->
-        <div class="fstep" data-step="7">
           <h3>Du hast es fast geschafft</h3>
           <p class="hint">Hinterlasse kurz deine Kontaktdaten. Wir melden uns persönlich bei dir.</p>
           <div class="frow">
@@ -661,7 +652,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cfe0ee}
         <div class="result" id="screenoutView">
           <div class="result__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg></div>
           <h3>Danke für dein Interesse</h3>
-          <p>Für unsere Stellen setzen wir eine abgeschlossene Ausbildung und Deutschkenntnisse auf mindestens B2-Niveau voraus. Aktuell passt das leider noch nicht. Du bist überzeugt, dass du trotzdem zu uns passt? Dann ruf uns gerne direkt an: <a href="tel:+492721603140">02721 603140</a>.<br /><br />Aus Versehen falsch angeklickt? Lade die Seite einfach neu und versuche es erneut.</p>
+          <p>Vielen Dank für dein Interesse! Nach deinen Angaben passt es aktuell leider noch nicht ganz zu unseren offenen Stellen. Du bist überzeugt, dass du trotzdem zu uns passt? Dann ruf uns gerne direkt an: <a href="tel:+492721603140">02721 603140</a>.<br /><br />Aus Versehen falsch angeklickt? Lade die Seite einfach neu und versuche es erneut.</p>
         </div>
 
         <div class="fnav" id="formNav">
@@ -753,15 +744,48 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cfe0ee}
   var UPLOAD_MAX    = 10 * 1024 * 1024;
   var UPLOAD_TYPES  = ["application/pdf","image/jpeg","image/png","image/webp","application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
 
-  /* Aussteuerung (Vorfilter): Diese Antworten führen zu einem freundlichen
-     Ausstieg – die Bewerbung wird NICHT an LeadTable gesendet. Aktuell
-     harte Kriterien: keine abgeschlossene Ausbildung, Deutsch unter B2.
-     Weitere Kriterien (z. B. Entfernung/Führerschein) werden nur erfasst,
-     nicht ausgesteuert – bei Bedarf hier Werte ergänzen. */
-  var SCREEN_OUT = [
-    "(noch) keine abgeschlossene Ausbildung",
+  /* ---------------- Vorfilter / Qualifizierung ----------------------
+     4 Qualifizierungsfragen (Ausbildung, Erfahrung, Deutsch, Entfernung)
+     werden mit Punkten bewertet. Wer insgesamt zu schwach ist ODER ein
+     hartes K.o.-Kriterium erfüllt, bekommt eine freundliche Absage und
+     wird NICHT als Lead an LeadTable gesendet.
+
+       • HARD_OUT: Antworten, die immer sofort absagen (nicht verhandelbar).
+         Aktuell nur: Deutsch unter B2. Wer z. B. "keine Ausbildung" ebenfalls
+         hart aussteuern will, ergänzt den Wert einfach hier.
+       • SCORES:    Punktwerte je Antwort (höher = besser).
+       • MIN_SCORE: Mindestsumme, ab der es weitergeht. Wer darunter liegt
+         (z. B. überall die schwächste Antwort), wird freundlich abgelehnt.
+     ------------------------------------------------------------------ */
+  var HARD_OUT = [
     "Grundkenntnisse – unter B2"
   ];
+  var SCORES = {
+    ausbildung: {
+      "Abgeschlossene Ausbildung im Metall-/Elektrobereich (passend)": 3,
+      "Abgeschlossene Ausbildung in einem anderen Bereich": 1,
+      "(noch) keine abgeschlossene Ausbildung": 0
+    },
+    erfahrung: {
+      "Mehrjährige Erfahrung – sicher an Maschine/Steuerung (inkl. CAD/CAM)": 3,
+      "Solide Grundkenntnisse an CNC/SPS": 2,
+      "Erste Berührung – vieles lerne ich noch": 1,
+      "Keine Erfahrung": 0
+    },
+    deutsch: {
+      "Fließend / Muttersprache": 3,
+      "Gut – mindestens B2": 2,
+      "Grundkenntnisse – unter B2": 0
+    },
+    entfernung: {
+      "Bis ca. 20 km": 2,
+      "20 bis 40 km": 2,
+      "Mehr als 40 km – aber umzugsbereit": 1,
+      "Mehr als 40 km": 0
+    }
+  };
+  var SCORED_FIELDS = ["ausbildung","erfahrung","deutsch","entfernung"];
+  var MIN_SCORE = 4;   // Summe max. 11; darunter -> freundliche Absage
 
   /* ---------- b&p-Logo laden (Fallback: Text) ----------
      Logo-Dateien in bilder/ ablegen; wird eine gefunden, ersetzt sie
@@ -834,10 +858,17 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cfe0ee}
     btnNext.disabled=!stepValid(current);
     errBox.classList.remove("is-visible");
   }
-  function isScreenedOut(){ var f=currentField(); return f ? SCREEN_OUT.indexOf(selectedValue(f))!==-1 : false; }
+  function isHardOut(){ var f=currentField(); return f ? HARD_OUT.indexOf(selectedValue(f))!==-1 : false; }
+  function totalScore(){
+    var sum=0;
+    SCORED_FIELDS.forEach(function(f){ var s=SCORES[f]; var v=selectedValue(f); if(s && s.hasOwnProperty(v)) sum+=s[v]; });
+    return sum;
+  }
+  function qualifies(){ return totalScore() >= MIN_SCORE; }
   function next(){
     if (locked || !stepValid(current) || submitting) return;
-    if (isScreenedOut()){ showScreenout(); return; }
+    if (isHardOut()){ showScreenout(); return; }                        // sofortiges K.o. (z. B. Deutsch unter B2)
+    if (current===TOTAL-1 && !qualifies()){ showScreenout(); return; }  // Gesamt-Punkte vor dem Kontaktschritt
     if (current===TOTAL){ submit(); return; }
     current++; render();
     var card=document.querySelector(".form-card");
@@ -917,8 +948,8 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cfe0ee}
   function collect(){
     function val(name){ var c=form.querySelector('input[name="'+name+'"]:checked'); if(c) return c.value; var inp=form.querySelector('input[name="'+name+'"]:not([type="radio"])'); return inp?inp.value.trim():""; }
     return { vorname:val("vorname"), nachname:val("nachname"), name:(val("vorname")+" "+val("nachname")).trim(), email:val("email"), telefon:val("telefon"),
-             stelle:val("position"), ausbildung:val("ausbildung"), deutsch:val("deutsch"), entfernung:val("entfernung"),
-             fuehrerschein:val("fuehrerschein"), cadcam:val("cadcam"), lebenslauf:"",
+             stelle:val("position"), ausbildung:val("ausbildung"), erfahrung:val("erfahrung"), deutsch:val("deutsch"), entfernung:val("entfernung"),
+             score:String(totalScore()), lebenslauf:"",
              datenschutz:"Ja (Einwilligung mit Absenden, Art. 6 Abs. 1 lit. a DSGVO)",
              quelle:"Karriere-Landingpage b&p Metalltechnik", seite:location.href };
   }
