@@ -1,29 +1,33 @@
 # Meta-Ads Creatives – b&p Metalltechnik
 
-Hier landen in **Schritt 2** die Werbemittel für die Meta-Kampagne
-(Facebook/Instagram) zur Suche nach **Zerspanungsmechaniker (m/w/d)**.
+Werbemittel für die Meta-Kampagne (Facebook/Instagram) zur Suche nach
+**Zerspanungsmechaniker** (CNC-Fräsen 3-/5-Achs & Drehtechnik) und
+**Elektroniker (SPS)** (m/w/d).
 
 ## Status
 
-- ⏳ **Bild-Creatives** – folgen, sobald echtes Bildmaterial im Repo liegt.
-- ⏳ **Werbetexte** (Primary Text, Headline, Description) – folgen zusammen mit
-  den Creatives in Schritt 2.
+- ✅ **Bild-Creatives** – erstellt aus dem echten b&p-Bildmaterial (`../bilder/`),
+  im b&p-CI (Logo, CI-Blau, Werkstattfotos).
+- ✅ **Werbetexte** – siehe [`werbetexte-meta-ads.md`](./werbetexte-meta-ads.md)
+  (Primary Text, Headlines, Descriptions, Targeting, Do's & Don'ts).
 
-## Wichtig: Schritt 2 erst nach Upload des Bildmaterials
+## Dateien (3 Motive × 2 Formate)
 
-Wie besprochen werden Creatives **und** Werbetexte **erst dann** erstellt, wenn
-echtes b&p-Bildmaterial im Repo vorliegt (Team, Maschinen, Halle, Werkstücke,
-Logo). Es wird **ausschließlich dieses Material** verwendet, damit die Creatives
-authentisch wirken und maximale Bewerberqualität erzeugen (Qualität statt Masse).
+| Motiv | 4:5 (Feed, 1080×1350) | 9:16 (Story/Reels, 1080×1920) |
+|-------|------------------------|-------------------------------|
+| Allgemein (beide Stellen) | `creative-allgemein-4x5.jpg` | `creative-allgemein-9x16.jpg` |
+| Zerspanungsmechaniker | `creative-zerspanung-4x5.jpg` | `creative-zerspanung-9x16.jpg` |
+| Elektroniker SPS | `creative-elektroniker-4x5.jpg` | `creative-elektroniker-9x16.jpg` |
 
-**So geht's weiter:**
-1. Bildmaterial in `../bilder/` hochladen (echte Fotos) –
-   siehe `../bilder/HIER-BILDER-ABLEGEN.txt`.
-2. Dann werden Creatives in den vereinbarten Meta-Formaten erstellt
-   (z. B. **4:5** = 1080 × 1350 px und **9:16** = 1080 × 1920 px) …
-3. … samt konvertierenden Werbetexten (Primary Text, Headline, Description),
-   alles im b&p-CI.
+Verwendetes Bildmaterial: `../bilder/1000064731.jpg` (allgemein),
+`1000064732.jpg` (Zerspanung), `1000064733.jpg` (Elektroniker); Logo
+`../bilder/bp-logo-weiss.png`.
 
-Offene Punkte für Schritt 2 (bitte noch bestätigen):
-- **Anzahl** der Creatives
-- **Formate** (Vorschlag: 4:5 und 9:16)
+## Anpassen / erweitern
+
+Auf Wunsch schnell ergänzbar:
+- weitere Formate (z. B. **1:1** 1080×1080 für den Feed),
+- andere Foto-/Motiv-Zuordnung,
+- zusätzliche Text-Varianten (Hook-Tests).
+
+Sag einfach, welche Anzahl/Formate final laufen sollen.
