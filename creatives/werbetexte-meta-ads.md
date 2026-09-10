@@ -21,10 +21,9 @@ Instagram. Ziel: **maximale Qualität der Bewerber** für die Stellen
   optimiert auf Formular-Abschlüsse. Radius deckt zusätzlich die Umkreis-Frage
   im Funnel ab.
 
-**Creatives** (im b&p-CI, mit echtem Bildmaterial):
-- `creative-allgemein-4x5.jpg` / `-9x16.jpg` – „Wir suchen dich" (beide Stellen)
-- `creative-zerspanung-4x5.jpg` / `-9x16.jpg` – Zerspanungsmechaniker
-- `creative-elektroniker-4x5.jpg` / `-9x16.jpg` – Elektroniker SPS
+**Creatives** (im b&p-CI, mit echtem Bildmaterial, je 4:5 und 9:16):
+- `creative-zerspanungsmechaniker-4x5.jpg` / `-9x16.jpg` – Zerspanungsmechaniker (m/w/d)
+- `creative-elektriker-sps-4x5.jpg` / `-9x16.jpg` – Elektriker SPS-Steuerung (m/w/d)
 
 ---
 
@@ -139,9 +138,8 @@ Bewirb dich in unter 60 Sekunden – ohne Anschreiben, Lebenslauf optional.
 
 ## Text-Overlays der Creatives (bereits umgesetzt)
 
-- **Allgemein:** „Wir suchen dich." · „Zerspanungsmechaniker & Elektroniker (m/w/d)"
-- **Zerspanung:** „Zerspanungsmechaniker (m/w/d)" · „CNC-Fräsen (3-/5-Achs) & Drehtechnik"
-- **Elektroniker:** „Elektroniker SPS (m/w/d)" · „Programmierung & Inbetriebnahme · Automation"
+- **Zerspanungsmechaniker:** „Zerspanungsmechaniker (m/w/d)" · „CNC-Fräsen (3-/5-Achs) & Drehtechnik · unbefristet · moderne CNC-Technik"
+- **Elektriker SPS:** „Elektriker SPS-Steuerung (m/w/d)" · „Programmierung & Inbetriebnahme · Automation · unbefristet"
 - **Gemeinsam:** b&p-Logo, CI-Blau, echtes Werkstattfoto, Badge „Jetzt in 60 Sek. bewerben".
 
 ---

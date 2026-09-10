@@ -11,17 +11,15 @@ Werbemittel für die Meta-Kampagne (Facebook/Instagram) zur Suche nach
 - ✅ **Werbetexte** – siehe [`werbetexte-meta-ads.md`](./werbetexte-meta-ads.md)
   (Primary Text, Headlines, Descriptions, Targeting, Do's & Don'ts).
 
-## Dateien (3 Motive × 2 Formate)
+## Dateien (2 Motive × 2 Formate)
 
 | Motiv | 4:5 (Feed, 1080×1350) | 9:16 (Story/Reels, 1080×1920) |
 |-------|------------------------|-------------------------------|
-| Allgemein (beide Stellen) | `creative-allgemein-4x5.jpg` | `creative-allgemein-9x16.jpg` |
-| Zerspanungsmechaniker | `creative-zerspanung-4x5.jpg` | `creative-zerspanung-9x16.jpg` |
-| Elektroniker SPS | `creative-elektroniker-4x5.jpg` | `creative-elektroniker-9x16.jpg` |
+| Zerspanungsmechaniker (m/w/d) | `creative-zerspanungsmechaniker-4x5.jpg` | `creative-zerspanungsmechaniker-9x16.jpg` |
+| Elektriker SPS-Steuerung (m/w/d) | `creative-elektriker-sps-4x5.jpg` | `creative-elektriker-sps-9x16.jpg` |
 
-Verwendetes Bildmaterial: `../bilder/1000064731.jpg` (allgemein),
-`1000064732.jpg` (Zerspanung), `1000064733.jpg` (Elektroniker); Logo
-`../bilder/bp-logo-weiss.png`.
+Verwendetes Bildmaterial: `../bilder/1000064731.jpg` (Zerspanung),
+`1000064733.jpg` (Elektriker); Logo `../bilder/bp-logo-weiss.png`.
 
 ## Anpassen / erweitern
 
