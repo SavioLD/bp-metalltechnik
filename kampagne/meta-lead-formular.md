@@ -21,7 +21,15 @@ Zerspanungsmechaniker (m/w/d) bei b&p Metalltechnik
 ```
 **Intro – Beschreibung**
 ```
-Unbefristet, moderne CNC-Technik (3-/5-Achs, Heidenhain & Siemens) in Lennestadt. In unter 60 Sekunden bewerben – ohne Anschreiben.
+Du bist Zerspanungsmechaniker und willst dein Handwerk an moderner Technik zeigen? Seit 2001 fertigen wir bei b&p in Lennestadt anspruchsvolle Einzelteile & Kleinserien für Werkzeug-, Formen- und Maschinenbau – an modernen CNC-Maschinen (3-/5-Achs, Heidenhain & Siemens).
+
+Darauf kannst du dich freuen:
+✅ Unbefristeter, sicherer Arbeitsplatz
+✅ Moderner Maschinenpark & abwechslungsreiche Projekte
+✅ Faire, pünktliche Bezahlung
+✅ Familiäres Team mit kurzen Wegen – kein Konzern
+
+Bewirb dich in unter 60 Sekunden – ohne Anschreiben, Lebenslauf optional. Wir melden uns persönlich bei dir.
 ```
 
 **Fragen**
@@ -91,7 +99,15 @@ Elektriker SPS-Steuerung (m/w/d) bei b&p Metalltechnik
 ```
 **Intro – Beschreibung**
 ```
-Unbefristet, Automation & Sondermaschinenbau in Lennestadt. In unter 60 Sekunden bewerben – ohne Anschreiben.
+Du programmierst Steuerungen und bringst Anlagen zum Laufen? Bei b&p in Lennestadt arbeitest du seit 2001 an Automation, Sondermaschinen und Anlagen – abwechslungsreiche Projekte statt Routine.
+
+Darauf kannst du dich freuen:
+✅ Unbefristeter, sicherer Arbeitsplatz
+✅ Moderne Anlagen & spannende Automatisierungsprojekte
+✅ Faire, pünktliche Bezahlung
+✅ Familiäres Team mit kurzen Wegen – kein Konzern
+
+Bewirb dich in unter 60 Sekunden – ohne Anschreiben, Lebenslauf optional. Wir melden uns persönlich bei dir.
 ```
 
 **Fragen** (Kontaktinfos wie oben; eigene Fragen je **Multiple Choice → Ja / Nein**):
