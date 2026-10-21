@@ -131,8 +131,32 @@ Optionale 4. KO-Frage (Erreichbarkeit):
    • Nein
 ```
 
-**Datenschutz, Dankesseite:** identisch zu Stelle 1 (gleicher Link, gleicher
-Hinweistext, gleiche Dankesseite).
+**Datenschutzrichtlinie**
+
+Link zur Datenschutzerklärung:
+```
+https://www.bp-metall.de/datenschutz/
+```
+Kurz-Hinweis / Einwilligungstext (Feld „Individueller Hinweis" / Disclaimer):
+```
+Mit dem Absenden willigst du ein, dass die b&p Metalltechnik GmbH deine Angaben (Name, Kontaktdaten und Antworten) zur Bearbeitung deiner Bewerbung und zur Kontaktaufnahme verarbeitet. Deine Daten werden vertraulich behandelt, ausschließlich für das Bewerbungsverfahren genutzt und nicht an unbefugte Dritte weitergegeben. Mehr dazu in unserer Datenschutzerklärung. Du kannst deine Einwilligung jederzeit widerrufen.
+```
+
+**Ende (Dankesseite)**
+
+Überschrift:
+```
+Danke – deine Bewerbung ist eingegangen!
+```
+Beschreibung:
+```
+Wir melden uns persönlich bei dir. Du hast Fragen? Ruf uns gerne direkt an: 02721 603140.
+```
+Button (CTA): **Website ansehen** →
+```
+https://www.bp-metall.de/
+```
+(Alternativ Button **Anrufen** → `02721 603140`)
 
 ---
 
