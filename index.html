@@ -725,11 +725,18 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cfe0ee}
   "use strict";
 
   /* ================================================================
-     LeadTable-Webhook: jede abgeschlossene Bewerbung wird als Lead
-     an diese URL gesendet (POST, JSON). Portal-Kachel:
-     https://portal.lead-table.com/customer/6a9fbc8bd7eae5fa903160b4/table/6a9fbca556885b968028a7a2/leads
+     LeadTable-Webhooks: jede abgeschlossene Bewerbung wird als Lead an
+     die passende Kachel gesendet (POST, JSON) – je nach gewählter Stelle:
+       • Elektroniker/Elektriker SPS-Steuerung  -> WEBHOOK_URL_SPS
+       • Zerspanungsmechaniker (CNC-Fräsen/Dreh) -> WEBHOOK_URL
+     Portal-Kacheln:
+       Zerspanung:  https://portal.lead-table.com/customer/6a9fbc8bd7eae5fa903160b4/table/6a9fbca556885b968028a7a2/leads
+       Elektro-SPS: https://portal.lead-table.com/customer/6a9fbc8bd7eae5fa903160b4/table/6ae08da78ec1f8bfc003f16f/leads
      ================================================================ */
-  var WEBHOOK_URL = "https://api-v2.lead-table.com/api/webhook/generic/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0YWJsZUlEIjoiNmE5ZmJjYTU1Njg4NWI5NjgwMjhhN2EyIiwiY3VzdG9tZXJJRCI6IjZhOWZiYzhiZDdlYWU1ZmE5MDMxNjBiNCIsImFnZW5jeUlEIjoiNjliZDc3NzVlNGQxN2IzOGVkNjUzZDE2IiwiaWF0IjoxNzg4ODUzNDEzfQ.d0hyFZ-STrvKtpjZOMF_xX7tXuW5RoSxV31z62Q-FI0";
+  var WEBHOOK_URL     = "https://api-v2.lead-table.com/api/webhook/generic/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0YWJsZUlEIjoiNmE5ZmJjYTU1Njg4NWI5NjgwMjhhN2EyIiwiY3VzdG9tZXJJRCI6IjZhOWZiYzhiZDdlYWU1ZmE5MDMxNjBiNCIsImFnZW5jeUlEIjoiNjliZDc3NzVlNGQxN2IzOGVkNjUzZDE2IiwiaWF0IjoxNzg4ODUzNDEzfQ.d0hyFZ-STrvKtpjZOMF_xX7tXuW5RoSxV31z62Q-FI0";
+  var WEBHOOK_URL_SPS = "https://api-v2.lead-table.com/api/webhook/generic/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0YWJsZUlEIjoiNmFlMDhkYTc4ZWMxZjhiZmMwMDNmMTZmIiwiY3VzdG9tZXJJRCI6IjZhOWZiYzhiZDdlYWU1ZmE5MDMxNjBiNCIsImFnZW5jeUlEIjoiNjliZDc3NzVlNGQxN2IzOGVkNjUzZDE2IiwiaWF0IjoxNzkzMTAxMjIzfQ.334FRrCA63U5O4HK766m8zoiOmZ0sGRyuhd-igurLgQ";
+  /* Elektroniker/Elektriker (SPS) -> eigene Kachel; alle anderen -> Standard. */
+  function webhookFor(stelle){ return /SPS|Elektro/i.test(stelle || "") ? WEBHOOK_URL_SPS : WEBHOOK_URL; }
 
   /* ----------------------------------------------------------------
      Optionaler Lebenslauf-Upload via Supabase Storage.
@@ -959,9 +966,10 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cfe0ee}
     uploadCv().then(function(cvUrl){
       btnNext.textContent="Wird gesendet …";
       var data=collect(); data.lebenslauf=cvUrl||"nicht hochgeladen"; var payload=JSON.stringify(data);
-      return fetch(WEBHOOK_URL,{ method:"POST", headers:{ "Content-Type":"application/json" }, body:payload })
+      var url=webhookFor(data.stelle);
+      return fetch(url,{ method:"POST", headers:{ "Content-Type":"application/json" }, body:payload })
         .then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); finishSuccess(); })
-        .catch(function(){ return fetch(WEBHOOK_URL,{ method:"POST", mode:"no-cors", headers:{ "Content-Type":"text/plain" }, body:payload }).then(finishSuccess); });
+        .catch(function(){ return fetch(url,{ method:"POST", mode:"no-cors", headers:{ "Content-Type":"text/plain" }, body:payload }).then(finishSuccess); });
     }).catch(function(err){
       submitting=false; btnNext.disabled=false; btnNext.textContent="Bewerbung absenden";
       if (err&&err.isUploadError) setUploadError("Der Upload hat leider nicht geklappt. Bitte versuche es noch einmal – oder entferne die Datei über das × und schicke den Lebenslauf später an info@bp-metall.de.");
